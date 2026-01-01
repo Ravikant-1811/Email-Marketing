@@ -1,1 +1,0 @@
-Hello evryone, welcome to the Index.php file!
