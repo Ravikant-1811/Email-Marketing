@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  nav {
+    background-color: #1f2937;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav a:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #6b7280;
+  }
+  
+  /* Connection Status Colors */
+  .status-success {
+    color: #10b981; /* Green */
+    font-weight: bold;
+  }
+  
+  .status-failed {
+    color: #ef4444; /* Red */
+    font-weight: bold;
+  }
+  
+  .form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+  }
+  
+  .form-container h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #374151;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  textarea,
+  input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #3b82f6;
+    background-color: white;
+    outline: none;
+  }
+  
+  button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease,
+      box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 41, 55, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #374151;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close:hover {
+    color: #ef4444;
+  }
+  
+  /* Mobile responsive design */
+  @media (max-width: 768px) {
+    nav {
+      padding: 10px;
+    }
+  
+    nav a {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    .card {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .card h2 {
+      font-size: 18px;
+    }
+  
+    .card p {
+      font-size: 14px;
+    }
+  
+    .form-container {
+      padding: 15px;
+    }
+  
+    .form-container h3 {
+      font-size: 18px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    textarea,
+    input[type="file"] {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav {
+      padding: 10px;
+    }
+  
+    nav a {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .container {
+      padding: 10px;
+      margin: 15px;
+    }
+  
+    .card {
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .card h2 {
+      font-size: 16px;
+    }
+  
+    .card p {
+      font-size: 12px;
+    }
+  
+    .form-container {
+      padding: 12px;
+    }
+  
+    .form-container h3 {
+      font-size: 16px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    textarea,
+    input[type="file"] {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    button {
+      padding: 8px 18px;
+      font-size: 12px;
+    }
+  }
+  
+
+
+  
